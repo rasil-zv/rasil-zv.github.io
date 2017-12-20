@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Интернет-магазин больших плюшевых мишек БеарТой</title>
+	
+	<!-- Yandex.Metrika counter --> 
+	<script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46749540 = new Ya.Metrika({ id:46749540, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46749540" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+	<!-- ================== Modals ===================== -->
+
+	<div class="overlay"></div>
+
+	<!-- Modal order -->
+	<div class="modals form" id="js-modal-order">
+		<div class="modals-close">&times;</div>
+		<h2>Форма <span>заказа</span></h2>
+		<form action="mailer/smart.php" method="POST" onsubmit="yaCounter46749540.reachGoal('order'); return true;">
+			<input class="form-input" type="text" placeholder="Ваше имя (*)" name="user_name" required="required">
+			<input class="form-input" type="tel" placeholder="Ваш телефон (*)" name="user_phone" required="required">
+			<input class="form-input" type="email" placeholder="Ваш e-mail (*)" name="user_email" required="required">
+			<textarea class="form-input" rows="2" placeholder="Какого мишку вы выбрали? (*)" name="bear" required="required"></textarea>
+			<div class="form-order">
+				<button class="form-btn">заказать</button>
+				<small>(*)-обязательно</small>
+			</div>
+		</form>
+	</div>
+
+	<!-- Modal thanks -->
+	<div class="modals-thanks" id="js-modal-thanks">
+		<div class="container">
+
+			<div class="row">
+				<div class="main-top">
+					
+					<div class="col-sm-5 col-sm-offset-1 col-xs-4">
+						<div class="main-logo">
+							<img class="main-logo" src="img/main/logo.png" alt="Биар Той">
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-xs-8">
+						<div class="main-call">
+							<img src="img/main/ico-phone.png" alt="phone">
+							<p><a href="tel:+73474824808"><span>(347)</span> 482-48-08</a></p><br>
+							<p><a href="tel:+798760120840"><span>(987)</span> 601-28-40</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modals-thanks-block">
+				<h2>Спасибо за заявку!</h2>
+				<p>Мы свяжемся с Вами и уточним все детали заявки. <br> Если у вас возник вопрос <br>позвоните по тел: +7 (987) 601-28-40 или +7 (347) 482-48-08</p>
+				<button class="form-btn js-close-modal">вернуться</button>
+			</div>
+
+		</div>
+	</div> 
+	
+
+	<!-- ================== 1. Main ======================= -->
+
+	<main class="main">
+		<div class="container">
+			
+			<div class="row">
+				<div class="main-top">
+					
+					<div class="col-sm-5 col-sm-offset-1 col-xs-4">
+						<div class="main-logo wow rollIn">
+							<img class="main-logo" src="img/main/logo.png" alt="Биар Той">
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-xs-8">
+						<div class="main-call wow slideInRight">
+							<a href="callto:+798760120840"><img class="animated flipInY" data-wow-delay=".9s" src="img/main/ico-phone.png" alt="phone"></a>
+							<p class="wow rubberBand" data-wow-delay=".9s"><a href="tel:+73474824808"><span>(347)</span> 482-48-08</a></p><br>
+							<p class="wow rubberBand" data-wow-delay="1.5s"><a href="tel:+798760120840"><span>(987)</span> 601-28-40</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="main-center">
+					
+					<div class="col-sm-6 wow pulse" data-wow-iteration="4">
+						<div class="main-text wow fadeInDownBig">
+							<p>Интернет-магазин</p>
+							<h1>Больших</h1>
+							<h2>плюшевых <br> мишек</h2>
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="form wow flipInY" data-wow-delay="1s">
+							<h2>Обратный <span>звонок</span></h2>
+							<form action="mailer/smart.php" method="POST" onsubmit="yaCounter46749540.reachGoal('order'); return true;">
+								<input class="form-input" type="text" placeholder="Ваше имя (*)" name="user_name" required="required">
+								<input class="form-input" type="tel" placeholder="Ваш телефон (*)" name="user_phone" required="required">
+								<input class="form-input" type="email" placeholder="Ваш e-mail" name="user_email">
+								<div class="form-order">
+									<button class="form-btn">заказать</button>
+									<small>(*)-обязательно</small>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div> <!-- /.main-center -->
+			</div>
+
+		</div>
+	</main>
+
+	<!-- ================== 2. Figures ======================= -->
+
+	<section class="figures">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 col-sm-6">
+					<div class="figures-block wow fadeInDown">
+						<div class="media">
+							<div class="media-left">
+								<div class="circle-border">
+									<div class="circle sale">50%</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h2>скидка</h2>
+								<p>При следующей покупке мы предоставим вам скидку <strong>50%</strong> на любой товар из ассортимента</p>
+							</div>
+						</div>
+					</div> <!-- /.figures-block -->
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="figures-block wow fadeInDown" data-wow-delay=".3s">
+						<div class="media">
+							<div class="media-left">
+								<div class="circle-border">
+									<div class="circle delivery">3-5</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h2>доставка</h2>
+								<p>При заказе нашего товара в другой регион РФ, мы гарантируем доставку в течение <strong>3-5 дней.</strong></p>
+							</div>
+						</div>
+					</div> <!-- /.figures-block -->
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="figures-block last wow fadeInDown" data-wow-delay=".6s">
+						<div class="media">
+							<div class="media-left">
+								<div class="circle-border">
+									<div class="circle refund">100%</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<h2>возврат</h2>
+								<p>Если по каким-то причинам вам не понравится наш товар, мы вернем вам ваши деньги, гарантия - <strong>100%.</strong></p>
+							</div>
+						</div>
+					</div> <!-- /.figures-block -->
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ================== 3. Text ======================= -->
+
+	<section class="text">
+		<div class="container">
+			<h3 class="wow slideInRight">наши медведи самые плюшевые</h3>
+			<p class="wow slideInLeft">Почему плюшевых «друзей» любят дети – это явление вполне объяснимо. Мишка для них одушевленный, живой друг, с которым можно поделиться своими секретами. По мнению психологов, как маленькие, так и большие плюшевые медведи играют серьезную роль в воспитании детей - имеют благоприятное воздействие, пробуждающее такие важные качества при формировании «маленьких личностей», как доброту, любовь и человечность.</p><br>
+			<p class="wow slideInLeft">Почему же популярен большой плюшевый медведь 
+			среди взрослых, которые часто берегут их как символ самого 
+			сокровенного на протяжении всей жизни. Особенную привязанность 
+			испытывают к таким мягким игрушкам женщины.</p>
+		</div>
+	</section>	
+	
+	<!-- ================== 4. Bears ======================= -->
+
+	<section class="bears">
+		<div class="container">
+
+			<div class="section-header">
+				<h2 class="wow jackInTheBox">большие плюшевые <span>мишки</span></h2>
+			</div>
+
+			<div class="bears-gallery">
+				
+				<div class="row">
+
+					<div class="bears-block">
+
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp">
+								<h3>мягкий плюшевый медвежонок, <br>цвет бежевый, 2 м.</h3>
+								<img src="img/bears/bear-1.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>6850 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp" data-wow-delay=".2s">
+								<h3>мягкий плюшевый медвежонок, <br>цвет светло-коричневый, 1.5 м.</h3>
+								<img src="img/bears/bear-4.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>3590 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp" data-wow-delay=".4s">
+								<h3>мягкий плюшевый медвежонок, <br>цвет светло-бежевый, 1.2 м.</h3>
+								<img src="img/bears/bear-7.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>2190 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp">
+								<h3>мягкий плюшевый медвежонок, <br>цвет светло-бежевый, 1.8 м.</h3>
+								<img src="img/bears/bear-5.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>5240 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp" data-wow-delay=".2s">
+								<h3>мягкий плюшевый медвежонок, <br>цвет белый, 1.3 м.</h3>
+								<img src="img/bears/bear-6.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>2590 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp" data-wow-delay=".4s">
+								<h3>мягкий плюшевый медвежонок, <br>цвет белый, 2 м.</h3>
+								<img src="img/bears/bear-2.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>6850 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp">
+								<h3>мягкий плюшевый медвежонок, <br>цвет белый, 1.2 м.</h3>
+								<img src="img/bears/bear-8.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>2260 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp" data-wow-delay=".2s">
+								<h3>мягкий плюшевый медвежонок, <br>цвет коричневый, 2 м.</h3>
+								<img src="img/bears/bear-3.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>6850 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-6">
+							<div class="bears-item wow slideInUp" data-wow-delay=".4s">
+								<h3>мягкий плюшевый медвежонок, <br>цвет бежевый, 1.8 м.</h3>
+								<img src="img/bears/bear-9.png" alt="мягкий плюшевый медвежонок, цвет белый, 2 м.">
+								<p>5340 руб.</p>
+								<a class="form-btn buy js-show-modal"><span>купить</span></a>
+							</div>
+						</div>
+						
+
+					</div> <!-- /.bears-block -->
+
+				</div>
+			</div> <!-- /.bears-gallery -->
+
+
+
+		</div>
+	</section>
+
+	<!-- ================== 5. Feedback ===================== -->
+
+	<section class="feedback">
+		<div class="container">
+
+			<div class="section-header wow jackInTheBox">
+				<h2>отзывы <span>клиентов</span></h2>
+			</div>
+
+			<div class="feedback-slider wow rollIn" id="js-feedback-slider">
+					
+					<div class="js-slide">
+						<div class="feedback-item">
+							<div class="media">
+								<div class="media-left">
+									<div class="circle-border">
+										<div class="circle client-2"></div>
+									</div>
+								</div>
+								<div class="media-body">
+									<div class="feedback-info">
+										<h2>Любченко Екатерина</h2>
+										<p class="feedback-item_city">Москва</p>
+										<p class="feedback-item_date">написала <time datetime="2016-04-11 14:31">11.04.2016, в 14:31</time></p>
+									</div>
+									<p class="feedback-item_text hidden-xs">«Позавчера приобрела мишку, доставили быстро и без опозданий, проблем нет. Спасибо.»</p>
+								</div>
+								<p class="feedback-item_text visible-xs">«Позавчера приобрела мишку, доставили быстро и без опозданий, проблем нет. Спасибо.»</p>
+							</div>
+						</div> <!-- /.feedback-item -->
+					</div> <!-- /.js-slide -->
+
+					<div class="js-slide">
+						<div class="feedback-item">
+							<div class="media">
+								<div class="media-left">
+									<div class="circle-border">
+										<div class="circle client-3"></div>
+									</div>
+								</div>
+								<div class="media-body">
+									<div class="feedback-info">
+										<h2>Калаченков Дмитрий</h2>
+										<p class="feedback-item_city">Екатеринбург</p>
+										<p class="feedback-item_date">написал <time datetime="2017-06-14 19:52">14.06.2017, в 19:52</time></p>
+									</div>
+									<p class="feedback-item_text hidden-xs">«Заказал для дочки большого белого медведя! как ни как 7 лет! оплатил через терминал! доставка супер !Еще обращусь!»</p>
+								</div>
+								<p class="feedback-item_text visible-xs">«Заказал для дочки большого белого медведя! как ни как 7 лет! оплатил через терминал! доставка супер !Еще обращусь!»</p>
+							</div>
+						</div> <!-- /.feedback-item -->
+					</div> <!-- /.js-slide -->
+
+					<div class="js-slide">
+						<div class="feedback-item">
+							<div class="media">
+								<div class="media-left">
+									<div class="circle-border">
+										<div class="circle client-4"></div>
+									</div>
+								</div>
+								<div class="media-body">
+									<div class="feedback-info">
+										<h2>Старченко Виталий</h2>
+										<p class="feedback-item_city">Москва</p>
+										<p class="feedback-item_date">написал <time datetime="2017-05-12 17:43">12.05.2017, в 17:43</time></p>
+									</div>
+									<p class="feedback-item_text hidden-xs">«Качество очень хорошее. Огромное спасибо за очень быструю доставку и хороший товар! Удачи всем, хорошего настроения и оптимизма»</p>
+								</div>
+								<p class="feedback-item_text visible-xs">«Качество мишки очень хорошее. Огромное спасибо за очень быструю доставку и хороший товар! Удачи всем сотрудникам, хорошего настроения, оптимизма и терпения с покупателями.»</p>
+							</div>
+						</div> <!-- /.feedback-item -->
+					</div> <!-- /.js-slide -->
+
+
+					<div class="js-slide">
+						<div class="feedback-item">
+							<div class="media">
+								<div class="media-left">
+									<div class="circle-border">
+										<div class="circle client-1"></div>
+									</div>
+								</div>
+								<div class="media-body">
+									<div class="feedback-info">
+										<h2>Ширинкина Наталья</h2>
+										<p class="feedback-item_city">Нижневартовск</p>
+										<p class="feedback-item_date">написала <time datetime="2017-04-15 11:11">15.04.2017, в 11:11</time></p>
+									</div>
+									<p class="feedback-item_text hidden-xs">«Первый раз заказываю через интернет-магазин, сперва боялась...Но мишку доставили, вовремя как и говорили...Спасибо вам! Очень понравился!»
+									</p>
+								</div>
+								<p class="feedback-item_text visible-xs">«Первый раз заказываю через интернет-магазин, сперва боялась...Но мишку доставили, вовремя как и говорили...Спасибо вам! Очень понравился!»</p>
+							</div>
+						</div> <!-- /.feedback-item -->
+					</div> <!-- /.js-slide -->
+
+			</div> <!-- /.feedback-slider -->
+
+		</div>
+	</section>
+
+	<!-- ================== 6. Order ===================== -->
+
+	<section class="order">
+		<div class="container">
+
+			<div class="section-header wow jackInTheBox">
+				<h2>легко и просто <span>заказать</span></h2>
+			</div>
+
+			<div class="order-form">
+				<form action="mailer/smart.php" method="POST" onsubmit="yaCounter46749540.reachGoal('order'); return true;">
+					<div class="col-sm-3 wow fadeInDown">
+						<input class="form-input" type="text" placeholder="Ваше имя (*)" name="user_name" required="required">
+					</div>
+					<div class="col-sm-3 wow fadeInDown" data-wow-delay=".4s">
+						<input class="form-input" type="tel" placeholder="Ваш телефон (*)" name="user_phone" required="required">
+					</div>
+					<div class="col-sm-3 wow fadeInDown" data-wow-delay=".6s">
+						<input class="form-input" type="email" placeholder="Ваш e-mail" name="user_email">
+					</div>
+					<div class="col-sm-3 wow fadeInDown" data-wow-delay=".8s">
+						<button class="form-btn">заказать</button>
+					</div>
+				</form>
+			</div>
+
+
+		</div>
+	</section>
+
+	<!-- ================== 7. Footer ===================== -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-sm-7">
+					<div class="footer-about">
+						<h2 class="wow flipInX" data-wow-delay=".3s">О нас</h2>
+						<div class="wow fadeInUp">
+							<h3>«Беар-Той» — интернет-магазин больших плюшевых медведей.</h3>
+							<p class="wow slideInLeft" data-wow-delay=".5s">Мы верим, что настоящие подарки должны привлекать взгляды прохожих. Мы уверены, что идеальный подарок должен быть большим и мягким.</p>
+							<p class="wow slideInLeft" data-wow-delay=".7s">Наши плюшевые медведи производятся в России из качественных и безопасных материалов. Они изготовлены с любовью. Поэтому каждый раз, даря наших мишек, Вы можете быть уверены, что подарок оценят.</p>
+							<p class="wow slideInLeft" data-wow-delay=".9s">Большие плюшевые игрушки любят все и мечтают получить в подарок как девушки, так и дети, и взрослые. Мы доставляем не просто больших медведей — мы доставляем новых друзей. Купив мишку у нас, Вы никогда не пожалеете о сделанном выборе. Мы всегда открыты к общению и сотрудничеству.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-5">
+					<div class="footer-contacts">
+						<h2 class="wow flipInX" data-wow-delay=".6s">Контакты</h2>
+						<div class="main-call footer-call wow fadeInUp">
+							<a href="callto:+798760120840"><img class="animated flipInY" src="img/main/ico-phone.png" alt="phone"></a>
+							<p class="wow slideInRight"><a href="tel:+73474824808"><span>(347)</span> 482-48-08</a></p><br>
+							<p class="footer-call_mobile wow slideInRight"><a href="tel:+798760120840"><span>(987)</span> 601-28-40</a></p>
+						</div>
+						<div class="footer-info wow fadeInUp">
+							<p class="footer-info_mail"><a href="mailto:info@bear-toy.ru">info@bear-toy.ru</a></p>
+							<p class="footer-info_address">450029, г. Уфа, ул.Первомаская, 25, офис 404</p>
+							<div class="footer-info-social">
+								<a class="footer-info-social_vk" href="" target="_blank">Вконтакте</a>
+								<a class="footer-info-social_fb" href="" target="_blank">Facebook</a>
+							</div>
+							<p class="developer">Разработка: <a href="https://vk.com/rasil_zv" target="_blank">Расиль Зайнутдинов</a></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+		
+
+	<!-- JQuery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<!-- Slick slider -->
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<script src="slick/slick.min.js"></script>
+
+	<!-- MaskedInput -->
+	<script src="js/jquery.maskedinput.min.js"></script>
+
+	<!-- Animation wow -->
+	<script src="js/wow.min.js"></script>
+
+	<!-- Customize -->
+	<script src="js/scripts.js"></script>
+
+	<script>
+		$(function(){
+
+			$('form').submit(function(e){
+
+				e.preventDefault();
+				$.ajax({
+					type: "POST",
+					url: "mailer/smart.php",
+					data: $(this).serialize()
+				}).done(function() {
+					$(this).find("input").val("");
+					$('body').addClass('open-modal');
+					$('#js-modal-order').fadeOut('fast');
+					$('#js-modal-thanks').fadeIn('slow');
+					$("form").trigger("reset");
+				});
+				return true;
+			});
+		});
+	</script>
+
+	
+
+	
+</body>
+</html>
