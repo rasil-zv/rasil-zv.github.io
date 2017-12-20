@@ -1,0 +1,911 @@
+/*
+
+0. Basic settings
+	Colors
+	Fonts
+	Mixins for fonts
+	Elements
+		section-header
+		form
+		button
+
+1. Header
+2. Main
+3. What
+4. Earn
+5. Need
+6. Get
+7. Guarantee
+8. About
+9. Question
+10. Footer
+11. Modals
+
+*/
+/* ====================== 0. Basic settings =======================  */
+/* Fonts */
+@font-face {
+  font-family: 'PTSans_bold';
+  src: url('../fonts/PTSans-Bold.eot');
+  src: url('../fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/PTSans-Bold.woff2') format('woff2'), url('../fonts/PTSans-Bold.woff') format('woff'), url('../fonts/PTSans-Bold.ttf') format('truetype'), url('../fonts/PTSans-Bold.svg#PTSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSans_reg';
+  src: url('../fonts/PTSans-Regular.eot');
+  src: url('../fonts/PTSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/PTSans-Regular.woff2') format('woff2'), url('../fonts/PTSans-Regular.woff') format('woff'), url('../fonts/PTSans-Regular.ttf') format('truetype'), url('../fonts/PTSans-Regular.svg#PTSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'PTSans_reg', sans-serif;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+body:hover {
+  cursor: default;
+}
+body.open-modal {
+  overflow-y: hidden;
+  padding-right: 1.7rem;
+}
+button:focus,
+input:focus,
+textarea:focus,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+section {
+  padding: 4rem 0;
+}
+a:hover {
+  text-decoration: none;
+}
+/* ========  Elements ==========  */
+/* section-header */
+.section-header h2 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 3.1rem;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* form */
+.form {
+  background: #ffffff;
+  border: 2px solid #3eb5f1;
+  border-radius: 10px;
+  text-align: center;
+  width: 360px;
+  max-width: 98%;
+  padding: 2.5rem;
+  margin: auto;
+}
+.form h2 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.4rem;
+  color: #000000;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+.form-input {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.4rem;
+  color: #000000;
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border: 1.5px solid #3eb5f1;
+  border-radius: 5px;
+}
+.form-input::-webkit-input-placeholder {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.3rem;
+  color: #000000;
+  opacity: .7;
+}
+.form-input::-moz-placeholder {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.3rem;
+  color: #000000;
+  opacity: .7;
+}
+.form-btn {
+  text-transform: uppercase;
+  width: 90%;
+  margin: 1rem 0 0;
+}
+/* button */
+.button {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.4rem;
+  color: #000000;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff9d02), to(#feb72a));
+  background: linear-gradient(0deg, #ff9d02 0%, #feb72a 100%);
+  border: 1px solid #c47900;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+.button:hover {
+  background: #feb625;
+  -webkit-box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.1);
+}
+/* ====================== 1. Header =======================  */
+.header {
+  padding: 1rem 0;
+  background: #fff;
+}
+.header-title {
+  font-size: 1.6rem;
+  color: #767676;
+  line-height: 1.3;
+  margin-top: .5rem;
+}
+.header-title strong {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.3rem;
+  color: #000000;
+  text-transform: uppercase;
+}
+.header-number {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.1rem;
+  text-align: right;
+  margin-top: 1rem;
+}
+.header-number img {
+  margin-right: 1.5rem;
+}
+.header-number a {
+  color: #4f4f4f;
+}
+.header-number a:hover {
+  color: #828282;
+}
+.header-or {
+  font-size: 1.8rem;
+  color: #4f4f4f;
+  text-align: center;
+  margin-top: 1rem;
+}
+.header-btn {
+  margin-top: .4rem;
+}
+/* ====================== 2. Main =======================  */
+.main {
+  background: url(../img/main/bg-main-mobile.jpg) top center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0rem 0 4rem;
+}
+.main .container-fluid {
+  padding: 0;
+}
+.main h1 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 3.1rem;
+  color: #ffffff;
+  line-height: 1.3;
+  -moz-text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+  -webkit-text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+.main h1 span {
+  color: #feca07;
+}
+.main-guarantee {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.3;
+  background: url(../img/main/bg-garantee.png) left center no-repeat;
+  background-size: cover;
+  width: 420px;
+  height: 160px;
+  padding: 2.5rem 2rem 2.5rem 6rem;
+  margin: 13rem auto 0 8rem;
+}
+.main-guarantee span {
+  position: relative;
+}
+.main-guarantee span::before {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 11px;
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  background: url(../img/main/quote-open.png) center no-repeat;
+}
+.main-guarantee span::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 11px;
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+  background: url(../img/main/quote-close.png) center no-repeat;
+}
+/* ====================== 3. What =======================  */
+.what {
+  background: #ececec url(../img/what/bg-what.jpg) left top repeat;
+}
+.what-block {
+  margin: 5rem 0 3rem;
+}
+.what-item {
+  float: left;
+  width: 20%;
+  text-align: center;
+  position: relative;
+}
+.what-item:focus {
+  outline: none;
+}
+.what-item::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 19px;
+  position: absolute;
+  right: -1.8rem;
+  top: 3rem;
+  background: url(../img/what/arrow.png) center no-repeat;
+  background-size: cover;
+}
+.what-item:last-child::after {
+  display: none;
+}
+.what-item img {
+  min-height: 10rem;
+}
+.what-item p {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  padding: 0 2rem;
+}
+.what-item p strong {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.5rem;
+}
+.what-total {
+  background: #ffffff;
+  border-top: 2px solid #ffb225;
+  text-align: center;
+  width: 96%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.what-total h3 {
+  font-family: 'PTSans_bold', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: url(../img/what/bg-total.png) center no-repeat;
+  width: 121px;
+  height: 53px;
+  padding-top: .7rem;
+  margin: 0 auto;
+}
+.what-total_reg {
+  font-size: 2rem;
+  font-style: italic;
+  margin-top: 2rem;
+}
+.what-total_bold {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  color: #000000;
+}
+/* ====================== 4. Earn =======================  */
+.earn-block {
+  margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.earn-block h3 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.1rem;
+  color: #000000;
+  margin: 0 0 1.5rem -1.5rem;
+}
+.earn-block img {
+  position: relative;
+  top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.earn-item {
+  overflow: hidden;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  padding: 0 0 1rem;
+}
+.earn-item h4 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #4c4c4c;
+  margin-left: 1rem;
+}
+.earn-item-text {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  padding: 1.5rem 1rem 0;
+}
+.earn-item-text p {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+.earn-item-text_gray {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.6rem;
+  color: #444;
+}
+.earn-item-text_blue {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.6rem;
+  color: #0083c7;
+}
+/* ====================== 5. Need =======================  */
+section.need {
+  padding-top: 0;
+}
+.need-block {
+  text-align: center;
+  margin-top: 4rem;
+}
+.need-item {
+  position: relative;
+  margin-bottom: 7rem;
+}
+.need-item_left::before {
+  content: "";
+  display: block;
+  width: 39px;
+  height: 28px;
+  background: url(../img/need/arrow-left.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -5rem;
+  right: 0;
+}
+.need-item_center::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 37px;
+  background: url(../img/need/arrow-center.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -5.5rem;
+  left: 50%;
+}
+.need-item_right::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 28px;
+  background: url(../img/need/arrow-right.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -5rem;
+  left: 0;
+}
+.need-item h3 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.4rem;
+  color: #2b8dcb;
+  margin-bottom: 0;
+}
+.need-item p {
+  font-size: 1.6rem;
+  color: #000000;
+  line-height: 1.2;
+}
+.need-item p span {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.1rem;
+  display: block;
+}
+/* ====================== 6. Get =======================  */
+.get {
+  background: #cacaca url(../img/get/bg-get.png) center repeat;
+}
+.get-block {
+  margin-top: 4rem;
+}
+.get-item {
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.get-item img {
+  float: left;
+  margin-bottom: 1rem;
+}
+.get-item h3 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-left: 14rem;
+}
+.get-item p {
+  font-size: 1.4rem;
+  margin-left: 14rem;
+}
+.get-btn {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+/* ====================== 7. Guarantee =======================  */
+.guarantee {
+  padding: 2rem 0 1rem;
+}
+.guarantee-block {
+  text-align: center;
+  margin-top: 5rem;
+}
+.guarantee-item {
+  margin-bottom: 4rem;
+}
+.guarantee-item img {
+  min-height: 7rem;
+  margin-bottom: 2rem;
+}
+.guarantee-item p {
+  font-size: 1.4rem;
+  color: #000000;
+}
+/* ====================== 8. About =======================  */
+.about {
+  background: #ececec;
+  padding: 7rem 0 3rem;
+}
+.about-photo {
+  text-align: center;
+}
+.about-photo img {
+  margin-top: 1.5rem;
+  max-width: 90%;
+}
+.about-photo h3 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.2rem;
+  color: #000000;
+}
+.about-photo p {
+  font-size: 1.7rem;
+}
+.about-photo p span {
+  display: block;
+}
+.about-text {
+  border: 2px solid #3eb5f1;
+  padding: 2rem 2rem 1rem;
+  margin-bottom: 3rem;
+}
+.about-text p {
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: justify;
+}
+.about-text_bold {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.2rem;
+  padding-left: 2rem;
+}
+/* ====================== 9. Question =======================  */
+.question {
+  text-align: center;
+  padding: 2rem 0 3.5rem;
+  border-bottom: 3px solid #45b8f1;
+}
+.question h2 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 4rem;
+  color: #000000;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  top: .7rem;
+}
+.question a {
+  font-size: 3rem;
+  color: #45b8f1;
+  margin-left: 2rem;
+  border-bottom: 1.5px dashed #45b8f1;
+}
+.question a:hover {
+  border-bottom: none;
+}
+/* ====================== 10. Footer =======================  */
+.footer {
+  padding: 3rem 0;
+  color: #000000;
+}
+.footer-phone a {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2.3rem;
+  color: #000000;
+}
+.footer-phone p {
+  font-size: 1.7rem;
+  line-height: .7;
+}
+.footer-info {
+  text-align: center;
+}
+.footer-info p {
+  font-size: 1.2rem;
+  line-height: .5;
+  padding-top: .5rem;
+}
+.footer-button {
+  text-align: right;
+}
+.footer-developer {
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer-developer h4 {
+  font-family: 'PTSans_bold', sans-serif;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+.footer-developer a {
+  color: #00a2ff;
+  font-size: 1.5rem;
+}
+/* ====================== 11. Modals =======================  */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4999;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+.modal-form {
+  max-width: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5000;
+  display: none;
+}
+.modal-form .form-btn {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2rem;
+}
+.modal-close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+.modal-thanks {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #ffffff url(../img/loupe.jpg) center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+.modal-thanks-block {
+  width: 31rem;
+  padding: 2rem 4rem;
+  margin: 10% auto;
+  background: #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal-thanks-block h2 {
+  font-family: 'PTSans_bold', sans-serif;
+  font-size: 2rem;
+  margin-top: 0;
+}
+/* ====================== Media queries =======================  */
+@media (max-width: 991px) {
+  body.open-modal {
+    padding-right: 0;
+  }
+  /* Elements */
+  .form {
+    width: 360px;
+    padding: 2.5rem;
+  }
+  .form h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+  .form-btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+  /* Header */
+  .header .logo {
+    text-align: center;
+  }
+  .header-number {
+    margin-top: 0;
+    text-align: center;
+  }
+  .header-btn {
+    display: block;
+    margin: 2rem auto 1rem;
+  }
+  /* Main */
+  .main {
+    background: url(../img/main/bg-main-mobile.jpg) top center no-repeat;
+    background-size: cover;
+    padding-top: 0;
+  }
+  .main .container-fluid {
+    padding: 0;
+  }
+  .main h1 {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2rem 0;
+    margin: 0 0 4rem;
+  }
+  .main-guarantee {
+    font-size: 2.5rem;
+    width: 340px;
+    height: 140px;
+    padding: 2.3rem 0 1rem 6rem;
+    margin: 17rem auto 0;
+  }
+  /* What */
+  .what-block {
+    margin-top: 2rem;
+  }
+  .what-item {
+    width: 50%;
+    margin-top: 3rem;
+  }
+  /* Earn */
+  .earn-main {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  /* Main */
+  .main h1 {
+    font-size: 2.3rem;
+  }
+  .main-guarantee {
+    margin: 0 auto 4rem;
+  }
+  /* What */
+  .what-item p {
+    font-size: 1.3rem;
+  }
+  .what-item p strong {
+    font-size: 1.3rem;
+  }
+  /* Earn */
+  .earn-block h3 {
+    text-align: center;
+  }
+  .earn-block img {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-40%);
+            transform: translateX(-40%);
+  }
+  .earn-block img.last {
+    -webkit-transform: translateX(-65%);
+            transform: translateX(-65%);
+  }
+  .earn-main {
+    width: 90%;
+    margin: 15px auto;
+  }
+  /* Need */
+  .need {
+    padding-bottom: 0;
+    margin-top: 0rem;
+  }
+  .need .section-header h2 {
+    margin: 0;
+  }
+  .need-item {
+    margin-bottom: 4rem;
+  }
+  .need-item_left::before,
+  .need-item_center::before,
+  .need-item_right::before {
+    display: none;
+  }
+  .need-item h3 {
+    font-size: 2rem;
+    margin-top: .5rem;
+  }
+  .need-item p {
+    font-size: 1.6rem;
+    color: #000000;
+    line-height: 1.2;
+  }
+  .need-item p span {
+    font-family: 'PTSans_bold', sans-serif;
+    font-size: 2.1rem;
+    display: block;
+  }
+  /* Guarantee */
+  .guarantee-item img {
+    margin-bottom: 1rem;
+  }
+  /* About */
+  .about {
+    padding: 3rem 0;
+  }
+  .about-photo {
+    text-align: left;
+  }
+  .about-photo img {
+    float: left;
+    width: 30%;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+  }
+  .about-photo p span {
+    display: inline-block;
+  }
+  .about-text {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+  /* Question  */
+  .question h2 {
+    display: block;
+  }
+  .question a {
+    margin-left: 0;
+  }
+  /* Footer */
+  .footer-phone {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .footer-info {
+    text-align: center;
+    display: none;
+  }
+  .footer-button {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .footer-developer {
+    text-align: center;
+    margin-top: 0rem;
+  }
+  .footer-developer h4 {
+    margin-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  /* Elements */
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+  .form-btn {
+    width: 100%;
+    margin: 0;
+  }
+  /* Main */
+  .main h1 {
+    font-size: 2rem;
+    padding: 2rem 1.1rem;
+  }
+  .main-guarantee {
+    font-size: 2rem;
+    width: 300px;
+    height: 100px;
+    padding: 1.2rem 0 0 6rem;
+    margin: 0 auto 4rem;
+  }
+  /* What */
+  .what-block {
+    max-height: 18rem;
+    margin-bottom: 5rem;
+  }
+  .what-item {
+    width: 100%;
+  }
+  .what-item::after {
+    display: none;
+  }
+  .what-item p {
+    font-size: 1.2rem;
+  }
+  .what-item p strong {
+    font-size: 1.2rem;
+  }
+  /* Get */
+  .get-item h3 {
+    font-size: 1.5rem;
+  }
+  .get-item p {
+    margin-left: 0;
+    clear: both;
+  }
+  .get-btn {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /* About */
+  .about-photo {
+    text-align: center;
+  }
+  .about-photo img {
+    float: none;
+    width: 65%;
+  }
+  .about-text {
+    margin-bottom: 1rem;
+  }
+  .about-text_bold {
+    font-size: 1.6rem;
+    padding-left: 0;
+  }
+  /* Question  */
+  .question {
+    padding: 2rem 0;
+  }
+  .question h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+  .question a {
+    font-size: 2rem;
+  }
+  /* Footer */
+  .footer {
+    padding-bottom: 1rem;
+  }
+  .footer-developer {
+    text-align: center;
+  }
+  .footer-developer h4 {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
+  .footer-developer a {
+    color: #00a2ff;
+    font-size: 1.4rem;
+  }
+}

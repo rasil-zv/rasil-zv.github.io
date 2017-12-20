@@ -1,0 +1,1260 @@
+/*
+
+0. Basic settings
+	Colors
+	Fonts
+	Mixins for fonts
+	Elements
+		section-header
+		form
+		button
+
+1. Header
+2. Main
+3. What
+4. Earn
+5. Need
+6. Get
+7. Guarantee
+8. About
+9. Question
+10. Footer
+11. Modals
+
+*/
+
+
+/* ====================== 0. Basic settings =======================  */ 
+
+// Colors
+
+@black-text: #000;
+@light-text: #fff;
+@brown-color: #4f4f4f;
+@border-color: #3eb5f1;
+@orange-color: #feca07;
+
+/* Fonts */
+
+@font-face {
+    font-family: 'PTSans_bold';
+    src: url('../fonts/PTSans-Bold.eot');
+    src: url('../fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTSans-Bold.woff2') format('woff2'),
+        url('../fonts/PTSans-Bold.woff') format('woff'),
+        url('../fonts/PTSans-Bold.ttf') format('truetype'),
+        url('../fonts/PTSans-Bold.svg#PTSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PTSans_reg';
+    src: url('../fonts/PTSans-Regular.eot');
+    src: url('../fonts/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTSans-Regular.woff2') format('woff2'),
+        url('../fonts/PTSans-Regular.woff') format('woff'),
+        url('../fonts/PTSans-Regular.ttf') format('truetype'),
+        url('../fonts/PTSans-Regular.svg#PTSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Mixins for fonts
+
+.reg() {
+	font-family: 'PTSans_reg', sans-serif;
+}
+
+.bold() {
+	font-family: 'PTSans_bold', sans-serif;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	.reg();
+	min-width: 320px; 
+	overflow-x: hidden;
+
+	&:hover {
+		cursor: default;
+	}
+
+	&.open-modal {
+		overflow-y: hidden;
+		padding-right: 1.7rem;
+	}
+}
+
+button, input, textarea, a {
+	&:focus {
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+section {
+	padding: 4rem 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+/* ========  Elements ==========  */
+
+/* section-header */ 
+.section-header {
+	h2 {
+		.bold();
+		font-size: 3.1rem;
+		color: @black-text;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+/* form */ 
+.form {
+	background: @light-text;
+	border: 2px solid @border-color;
+	border-radius: 10px;
+	text-align: center;
+	width: 360px;
+	max-width: 98%;
+	padding: 2.5rem;
+	margin: auto;
+
+	h2 {
+		.bold();
+		font-size: 2.4rem;
+		color: @black-text;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 3rem;
+	}
+
+	&-input {
+		.bold();
+		font-size: 1.4rem;
+		color: @black-text;
+		display: block;
+		width: 100%;
+		padding: 1rem 2rem;
+		margin-bottom: 2rem;
+		border: 1.5px solid @border-color;
+		border-radius: 5px;
+
+		&::-webkit-input-placeholder {
+			.bold();
+			font-size: 1.3rem;
+			color: @black-text;
+			opacity: .7;
+		}
+
+		&::-moz-placeholder {
+			.bold();
+			font-size: 1.3rem;
+			color: @black-text;
+			opacity: .7;
+		}
+
+	}
+
+	&-btn {
+		text-transform: uppercase;
+		width: 90%;
+		margin: 1rem 0 0;
+	}
+}
+
+/* button */
+.button {
+	.bold();
+	font-size: 1.4rem;
+	color: @black-text;
+	background: -webkit-linear-gradient(0deg, #ff9d02 0%, #feb72a 100%);
+	background: -moz-linear-gradient(0deg, #ff9d02 0%, #feb72a 100%);
+	background: -o-linear-gradient(0deg, #ff9d02 0%, #feb72a 100%);
+    background: -ms-linear-gradient(0deg, #ff9d02 0%, #feb72a 100%);
+    background: linear-gradient(0deg, #ff9d02 0%, #feb72a 100%);
+	border: 1px solid #c47900;
+	border-radius: 5px;
+	padding: 1rem 2rem;
+
+	&:hover {
+		background: #feb625;
+		box-shadow: 2px 5px 6px rgba(0, 0, 0, .1);
+	} 
+}
+
+
+/* ====================== 1. Header =======================  */ 
+
+.header {
+	padding: 1rem 0;
+	background: #fff;
+
+	&-title {
+		font-size: 1.6rem;
+		color: #767676;
+		line-height: 1.3;
+		margin-top: .5rem;
+
+		strong {
+			.bold();
+			font-size: 1.3rem;
+			color: @black-text;
+			text-transform: uppercase;
+		}
+	}
+
+	&-number {
+		.bold();
+		font-size: 2.1rem;
+		text-align: right;
+		margin-top: 1rem;
+
+		img {
+			margin-right: 1.5rem;
+		}
+
+		a {
+			color: @brown-color;
+
+			&:hover {
+				color: lighten(@brown-color, 20%);
+			}
+		}
+
+	}
+
+	&-or {
+		font-size: 1.8rem;
+		color: @brown-color;
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	&-btn {
+		margin-top: .4rem;
+	}
+}
+
+/* ====================== 2. Main =======================  */ 
+
+.main {
+	background: url(../img/main/bg-main-mobile.jpg) top center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 0rem 0 4rem;
+
+	.container-fluid {
+		padding: 0;
+	}
+
+	h1 {
+		.bold();
+		font-size: 3.1rem;
+		color: @light-text;
+		line-height: 1.3;
+		-moz-text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+		-webkit-text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+		text-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+		text-align: center;
+		padding: 2rem 0;
+		margin-top: 0;
+		margin-bottom: 3rem;
+		background: rgba(255, 255, 255, .3);
+		
+		span {
+			color: @orange-color;
+		}
+	}
+
+	&-guarantee {
+		.bold();
+		font-size: 3rem;
+		color: @light-text;
+		text-transform: uppercase;
+		line-height: 1.3;
+		background: url(../img/main/bg-garantee.png) left center no-repeat;
+		background-size: cover;
+		width: 420px;
+		height: 160px;
+		padding: 2.5rem 2rem 2.5rem 6rem;
+		margin: 13rem auto 0 8rem;
+
+		span {
+			position: relative;
+
+			&::before {
+				content: "";
+				display: block;
+				width: 17px;
+				height: 11px;
+				position: absolute;
+				left: -3rem;
+				top: 0;
+				background: url(../img/main/quote-open.png) center no-repeat;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				width: 17px;
+				height: 11px;
+				position: absolute;
+				right: -3rem;
+				bottom: 0;
+				background: url(../img/main/quote-close.png) center no-repeat;
+			}
+		}
+	}
+}
+
+/* ====================== 3. What =======================  */ 
+
+.what {
+	background: #ececec url(../img/what/bg-what.jpg) left top repeat;
+
+	&-block {
+		margin: 5rem 0 3rem;
+	}
+
+	&-item {
+		float: left;
+		width: 20%;
+		text-align: center;
+		position: relative;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 45px;
+			height: 19px;
+			position: absolute;
+			right: -1.8rem;
+			top: 3rem;
+			background: url(../img/what/arrow.png) center no-repeat;
+			background-size: cover;
+		}
+
+		&:last-child {
+
+			&::after {
+				display: none;
+			}
+
+		}
+		
+		img {
+			min-height: 10rem;
+		}
+
+		p {
+			margin-top: 1rem;
+			font-size: 1.4rem;
+			padding: 0 2rem;
+
+			strong {
+				.bold();
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	&-total {
+		background: @light-text;
+		border-top: 2px solid #ffb225;
+		text-align: center;
+		width: 96%;
+		margin: 0 auto;
+		padding-bottom: 2rem;
+
+
+		h3 {
+			.bold();
+			color: @light-text;
+			text-transform: uppercase;
+			background: url(../img/what/bg-total.png) center no-repeat;
+			width: 121px;
+			height: 53px;
+			padding-top: .7rem;
+			margin: 0 auto;
+		}
+
+		&_reg {
+			font-size: 2rem;
+			font-style: italic;
+			margin-top: 2rem;
+		}
+
+		&_bold {
+			.bold();
+			font-size: 2.4rem;
+			font-style: italic;
+			color: @black-text;
+		}
+	}
+}
+
+/* ====================== 4. Earn =======================  */ 
+
+.earn {
+
+	&-block {
+		margin-top: 4rem;
+		overflow: hidden;
+		position: relative;
+
+		h3 {
+			.bold();
+			font-size: 2.1rem;
+			color: @black-text;
+			margin: 0 0 1.5rem -1.5rem;
+		}
+
+		img {
+			position: relative;
+			top: 2.5rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&-item {
+		overflow: hidden;
+		background: #f5f5f5;
+		border: 1px solid #e8e8e8;
+		padding: 0 0 1rem;
+
+		h4 {
+			.bold();
+			font-size: 1.6rem;
+			font-style: italic;
+			color: #4c4c4c;
+			margin-left: 1rem;
+		}
+
+		&-text {
+			background: @light-text;
+			border: 1px solid #e8e8e8;
+			padding: 1.5rem 1rem 0;
+
+			p {
+				font-size: 1.5rem;
+				color: @black-text;
+				margin-bottom: 1.5rem;
+			}
+
+			&_gray {
+				.bold();
+				font-size: 1.6rem;
+				color: #444;
+			}
+
+			&_blue {
+				.bold();
+				font-size: 1.6rem;
+				color: #0083c7;
+			}
+		}
+	}
+}
+
+/* ====================== 5. Need =======================  */ 
+
+section.need {
+	padding-top: 0;
+}
+
+.need {
+	
+	&-block {
+		text-align: center;
+		margin-top: 4rem;
+	}
+
+	&-item {
+		position: relative;
+		margin-bottom: 7rem;
+
+		&_left::before {
+			content: "";
+			display: block;
+			width: 39px;
+			height: 28px;
+			background: url(../img/need/arrow-left.png) center no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: -5rem;
+			right: 0;
+		}
+
+		&_center::before {
+			content: "";
+			display: block;
+			width: 9px;
+			height: 37px;
+			background: url(../img/need/arrow-center.png) center no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: -5.5rem;
+			left: 50%;
+		}
+
+		&_right::before {
+			content: "";
+			display: block;
+			width: 36px;
+			height: 28px;
+			background: url(../img/need/arrow-right.png) center no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: -5rem;
+			left: 0;
+		}
+
+		h3 {
+			.bold();
+			font-size: 2.4rem;
+			color: #2b8dcb;
+			margin-bottom: 0;
+		}
+
+		p {
+			font-size: 1.6rem;
+			color: @black-text;
+			line-height: 1.2;
+
+			span {
+				.bold();
+				font-size: 2.1rem;
+				display: block;
+			}
+		}
+	}
+
+}
+
+/* ====================== 6. Get =======================  */ 
+
+.get {
+	background: #cacaca url(../img/get/bg-get.png) center repeat;
+
+	&-block {
+		margin-top: 4rem;
+	}
+
+	&-item {
+		overflow: hidden;
+		margin-bottom: 4rem;
+
+		img {
+			float: left;
+			margin-bottom: 1rem;
+		}
+
+		h3 {
+			.bold();
+			font-size: 1.6rem;
+			line-height: 1.3;
+			margin-top: 0;
+			margin-left: 14rem;
+		}
+
+		p {
+			font-size: 1.4rem;
+			margin-left: 14rem;
+		}
+	}
+
+	&-btn {
+		display: block;
+		margin: 0 auto;
+		text-transform: uppercase;
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+}
+
+/* ====================== 7. Guarantee =======================  */ 
+
+.guarantee {
+	padding: 2rem 0 1rem;
+
+	&-block {
+		text-align: center;
+		margin-top: 5rem;
+	}
+
+	&-item {
+		margin-bottom: 4rem;
+
+		img {
+			min-height: 7rem;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			font-size: 1.4rem;
+			color: @black-text;
+		}
+	}
+
+}
+
+/* ====================== 8. About =======================  */ 
+
+.about {
+	background: #ececec;
+	padding: 7rem 0 3rem;
+
+	&-photo {
+		text-align: center;
+
+		img {
+			margin-top: 1.5rem;
+			max-width: 90%;
+		}
+
+		h3 {
+			.bold();
+			font-size: 2.2rem;
+			color: @black-text;
+		}
+
+		p {
+			font-size: 1.7rem;
+
+			span {
+				display: block;
+			}
+		}
+	}
+
+	&-text {
+		border: 2px solid #3eb5f1;
+		padding: 2rem 2rem 1rem;
+		margin-bottom: 3rem;
+
+		p {
+			font-size: 1.5rem;
+			color: @black-text;
+			text-align: justify;
+		}
+
+		&_bold {
+			.bold();
+			font-size: 2.2rem;
+			padding-left: 2rem;
+		}
+	}
+
+}
+
+/* ====================== 9. Question =======================  */ 
+
+.question {
+	text-align: center;
+	padding: 2rem 0 3.5rem;
+	border-bottom: 3px solid #45b8f1;
+	 
+	h2 {
+		.bold();
+		font-size: 4rem;
+		color: @black-text;
+		text-transform: uppercase;
+		display: inline-block;
+		position: relative;
+		top: .7rem;
+	}
+
+	a {
+		font-size: 3rem;
+		color: #45b8f1;
+		margin-left: 2rem;
+		border-bottom: 1.5px dashed #45b8f1;
+
+		&:hover {
+			border-bottom: none;
+		}
+	}
+	
+}
+
+/* ====================== 10. Footer =======================  */ 
+
+.footer {
+	padding: 3rem 0;
+	color: @black-text;
+
+	&-phone {
+		
+		a {
+			.bold();
+			font-size: 2.3rem;
+			color: @black-text;
+		}
+
+		p {
+			font-size: 1.7rem;
+			line-height: .7;
+		}
+	}
+
+	&-info {
+		text-align: center;
+
+		p {
+			font-size: 1.2rem;
+			line-height: .5;
+			padding-top: .5rem;
+		}
+	}
+
+	&-button {
+		text-align: right;
+	}
+
+	&-developer {
+		text-align: center;
+		margin-top: 2rem;
+		
+
+		h4 {
+			.bold();
+			margin-bottom: .5rem;
+			font-size: 1.5rem;
+		}
+
+		a {
+			color: #00a2ff;
+			font-size: 1.5rem;
+		}
+	}
+
+}
+
+
+/* ====================== 11. Modals =======================  */
+
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4999;
+	background: rgba(0, 0, 0, 0.9);
+	
+	display: none;
+}
+
+.modal {
+
+	// Form
+	&-form {
+		max-width: 90%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 5000;
+		display: none;
+
+		.form-btn {
+			.bold();
+			font-size: 2rem;
+		}
+	}
+
+	&-close {
+		position: absolute;
+		top: 7px;
+		right: 10px;
+		transform: rotate(90deg);
+		cursor: pointer;
+	}
+
+	// thanks
+	&-thanks {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		background: #fff url(../img/loupe.jpg) center no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100vh;
+		display: none;
+
+		&-block {
+			width: 31rem;
+			padding: 2rem 4rem;
+			margin: 10% auto;
+			background: #ccc;
+			border-radius: 10px;
+			text-align: center;
+
+			h2 {
+				.bold();
+				font-size: 2rem;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+
+
+/* ====================== Media queries =======================  */ 
+
+@media (max-width: 991px) {
+
+	body {
+		&.open-modal {
+			padding-right: 0;
+		}
+	}
+
+	/* Elements */
+
+	.form {
+		width: 360px;
+		padding: 2.5rem;
+
+		h2 {
+			font-size: 2rem;
+			margin-top: 0;
+			margin-bottom: 3rem;
+		}
+
+		&-btn {
+			font-size: 1.2rem;
+			padding: 1rem 1.5rem;
+		}
+	} 
+
+	/* Header */ 
+
+	.header {
+
+		.logo {
+			text-align: center;
+		}
+
+		&-number {
+			margin-top: 0;
+			text-align: center;
+		}
+
+		&-btn {
+			display: block;
+			margin: 2rem auto 1rem;
+		}
+	}
+
+	/* Main */ 
+
+	.main {
+		background: url(../img/main/bg-main-mobile.jpg) top center no-repeat;
+		background-size: cover;
+		padding-top: 0;
+
+		.container-fluid  {
+			padding: 0;
+		}
+
+		h1 {
+			background: rgba(255, 255, 255, .3);
+			padding: 2rem 0;
+			margin: 0 0 4rem;
+		}
+
+		&-guarantee {
+			font-size: 2.5rem;
+			width: 340px;
+			height: 140px;
+			padding: 2.3rem 0 1rem 6rem;
+			margin: 17rem auto 0;
+		}
+	}
+
+	/* What */ 
+
+	.what {
+
+		&-block {
+			margin-top: 2rem;
+		}
+
+		&-item {
+			width: 50%;
+			margin-top: 3rem;
+				
+			// &::after {
+			// 	display: none;
+			// }
+			
+			// &:last-child {
+			// 	position: relative;
+			// 	left: 50%;
+			// 	transform: translate(-50%);
+			// }
+		}
+	}
+
+	/* Earn */ 
+
+	.earn {
+		&-main {
+			width: 70%;
+			margin: 0 auto;
+		}
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	/* Main */ 
+
+	.main {
+
+		h1 {
+			font-size: 2.3rem;
+		}
+
+		&-guarantee {
+			margin: 0 auto 4rem;
+		}
+	}
+
+	/* What */ 
+
+	.what {
+		&-item { 
+			p {
+				font-size: 1.3rem;
+
+				strong {
+					font-size: 1.3rem;
+				}
+			}
+		}
+	}
+
+	/* Earn */ 
+
+	.earn {
+
+		&-block {
+			h3 {
+				text-align: center;
+			}
+
+			img {
+				position: relative;
+				left: 50%;
+				transform: translateX(-40%);
+			}
+
+			img.last {
+				transform: translateX(-65%);
+			}
+		}
+
+		&-main {
+			width: 90%;
+			margin: 15px auto;
+		}
+	}
+
+	/* Need */ 
+
+	.need {
+		padding-bottom: 0;
+		margin-top: 0rem;
+
+		.section-header {
+			h2 {
+				margin: 0;
+			} 
+		}
+
+		&-item {
+			margin-bottom: 4rem;
+			
+			&_left::before,
+			&_center::before,
+			&_right::before {
+				display: none;
+			}
+
+			h3 {
+				font-size: 2rem;
+				margin-top: .5rem;
+			}
+
+			p {
+				font-size: 1.6rem;
+				color: @black-text;
+				line-height: 1.2;
+
+				span {
+					.bold();
+					font-size: 2.1rem;
+					display: block;
+				}
+			}
+
+		}
+	}
+
+
+	/* Guarantee */ 
+
+	.guarantee {;
+
+		&-item {
+			img {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	/* About */ 
+
+	.about {
+		padding: 3rem 0;
+
+		&-photo {
+			text-align: left;
+
+			img {
+				float: left;
+				width: 30%;
+				margin-top: 0.5rem;
+				margin-right: 2rem;
+			}
+
+			p span {
+				display: inline-block;
+			}
+		}
+
+		&-text {
+			border: none;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+		}
+	}
+
+	/* Question  */ 
+
+	.question {
+		h2 {
+			display: block;
+		}
+		a {
+			margin-left: 0;
+		}
+	}
+
+	/* Footer */ 
+
+	.footer {
+
+		&-phone {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+
+		&-info {
+			text-align: center;
+			display: none;
+		}
+
+		&-button {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+
+		&-developer {
+			text-align: center;
+			margin-top: 0rem;
+
+			h4 {
+				margin-top: 0;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	/* Elements */ 
+
+	.section-header {
+		h2 {
+			font-size: 2.5rem;
+		}
+	}
+
+	.form {
+		&-btn {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	/* Main */ 
+
+	.main {
+
+		h1 {
+			font-size: 2rem;
+			padding: 2rem 1.1rem;
+		}
+
+		&-guarantee {
+			font-size: 2rem;
+			width: 300px;
+			height: 100px;
+			padding: 1.2rem 0 0 6rem;
+			margin: 0 auto 4rem;
+		}
+	}
+
+	/* What */ 
+
+	.what {
+
+		&-block {
+			max-height: 18rem;
+			margin-bottom: 5rem;
+
+		}
+
+		&-item {
+			width: 100%;
+
+			&::after {
+				display: none;
+			}
+
+			p {
+				font-size: 1.2rem;
+
+				strong {
+					font-size: 1.2rem;
+				}
+			}
+
+			// &:last-child {
+			// 	position: relative;
+			// 	left: 50%;
+			// 	transform: translate(-50%);
+			// }
+		}
+	}
+
+
+	/* Get */ 
+
+	.get {
+
+		&-item {
+
+			h3 {
+				font-size: 1.5rem;
+			}
+
+			p {
+				margin-left: 0;
+				clear: both;
+			}
+		}
+
+
+		&-btn {
+			padding-left: 3rem;
+			padding-right: 3rem;
+		}
+
+	}
+
+	/* About */ 
+
+	.about {
+
+		&-photo {
+			text-align: center;
+
+			img {
+				float: none;
+				width: 65%;
+			}
+		}
+
+		&-text {
+			margin-bottom: 1rem;
+
+			&_bold {
+				font-size: 1.6rem;
+				padding-left: 0;
+			}
+		}
+
+	}
+
+	/* Question  */ 
+
+	.question {
+		padding: 2rem 0;
+		h2 {
+			font-size: 2.5rem;
+			margin-top: 0;
+		}
+
+		a {
+			font-size: 2rem;
+		}
+	}
+
+	/* Footer */ 
+
+	.footer {
+		padding-bottom: 1rem;
+
+		&-developer {
+			text-align: center;
+
+			h4 {
+				font-size: 1.2rem;
+				margin-bottom: .5rem;
+			}
+
+			a {
+				color: #00a2ff;
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+
+}
